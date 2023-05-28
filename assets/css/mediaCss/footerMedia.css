@@ -1,0 +1,32 @@
+/* Ekran genişliği 768 pikselden küçük olduğunda */
+@media screen and (max-width: 768px) {
+     footer .mega .inf {
+          flex-direction: column;
+          background-color: #232f3e;
+          height: auto;
+     }
+
+     footer .mega .inf .columnOne,
+     footer .mega .inf .columnTwo,
+     footer .mega .inf .columnThree,
+     footer .mega .inf .columnFour {
+          width: 100%;
+          margin: 10px 0;
+          padding: 0;
+     }
+
+     footer .mega .ragnars{
+          background-color: #232f3e;
+          border: none;
+     }
+
+     footer .mega .ragnars ul {
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+     }
+
+     footer .mega .ragnars ul li {
+          margin: 5px 0;
+     }
+}

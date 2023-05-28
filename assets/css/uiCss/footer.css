@@ -1,0 +1,142 @@
+footer {
+     background-color: #232f3e;
+     width: 100%;
+     height: 43.75rem;
+}
+
+footer .top {
+     background-color: #131921;
+     width: 100%;
+     height: 6.25rem;
+}
+
+footer .top h1 {
+     text-align: center;
+     width: 100%;
+     background-color: transparent;
+     height: 4.375rem;
+     padding-top: 1.5625rem;
+}
+
+footer .top a {
+     color: white;
+     text-decoration: none;
+}
+
+/*YUKARISI TOP*/
+
+footer .mega {
+     background-color: #232f3e;
+     width: 100%;
+     height: 37.5rem;
+}
+
+footer .mega .inf {
+     background-color: #232f3e;
+     width: 100%;
+     height: 28.125rem;
+     display: flex;
+}
+
+footer .mega .inf .columnOne {
+     background-color: transparent;
+     margin: auto;
+     width: 20%;
+     height: 21.875rem;
+     padding: .625rem;
+}
+
+footer .mega .inf .columnTwo {
+     background-color: transparent;
+     margin: auto;
+     width: 20%;
+     height: 21.875rem;
+     padding: .625rem;
+}
+
+footer .mega .inf .columnThree {
+     background-color: transparent;
+     margin: auto;
+     width: 20%;
+     height: 21.875rem;
+     padding: .625rem;
+}
+
+footer .mega .inf .columnFour {
+     background-color: transparent;
+     margin: auto;
+     width: 20%;
+     height: 21.875rem;
+     padding: .625rem;
+}
+
+footer .mega .inf .columnOne ul,
+footer .mega .inf .columnTwo ul,
+footer .mega .inf .columnThree ul,
+footer .mega .inf .columnFour ul {
+     list-style-type: none;
+}
+
+footer .mega .inf .columnOne ul li,
+footer .mega .inf .columnTwo ul li,
+footer .mega .inf .columnThree ul li,
+footer .mega .inf .columnFour ul li {
+     margin: .625rem;
+     font-size: 1.5625rem;
+}
+
+footer .mega .inf .columnOne ul li a,
+footer .mega .inf .columnTwo ul li a,
+footer .mega .inf .columnThree ul li a,
+footer .mega .inf .columnFour ul li a {
+     text-decoration: none;
+     color: lightgray;
+     transition: 0.5s ease-in-out;
+}
+
+footer .mega .inf .columnOne ul li a:hover,
+footer .mega .inf .columnTwo ul li a:hover,
+footer .mega .inf .columnThree ul li a:hover,
+footer .mega .inf .columnFour ul li a:hover {
+     color: white;
+}
+
+footer .mega .inf .columnOne h1,
+footer .mega .inf .columnTwo h1,
+footer .mega .inf .columnThree h1,
+footer .mega .inf .columnFour h1 {
+     color: white;
+}
+
+/**/
+
+footer .mega .ragnars {
+     background-color: transparent;
+     width: 100%;
+     height: 9.375rem;
+}
+
+footer .mega .ragnars h1{
+     color: white;
+     text-align: center;
+}
+
+footer .mega .ragnars ul{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     list-style-type: none;
+}
+
+footer .mega .ragnars ul li{
+     margin-top: 1.25rem;
+     margin-left: .9375rem;
+     color: white;
+}
+
+footer .mega .ragnars p{
+     margin-top: .625rem;
+     text-align: center;
+     color: white;
+}
+

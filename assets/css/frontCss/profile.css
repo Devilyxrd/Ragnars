@@ -1,0 +1,68 @@
+main{
+     background-color: whitesmoke;
+     width: 100%;
+     height: 60rem;
+     padding-top: 6.25rem;
+}
+
+main .userArea{
+     background-color: #000000da;
+     width: 70%;
+     height: auto;
+     padding: 1.25rem;
+     display: flex;
+     margin: auto;
+}
+
+main .userArea .user{
+     background-color: #232f3e88;
+     width: 32%;
+     height: auto;
+     padding: 1.25rem;
+}
+
+main .userArea .user img{
+     padding-top: .625rem;
+     margin: 0 auto 0 auto;
+     display: table;
+     width: 50%;
+     height: auto;
+     border-radius: 50%;
+     margin-bottom: 2.5rem;
+}
+
+main .userArea .user h1{
+     color: white;
+     text-align: center;
+     font-size: 2.5rem;
+}
+
+main .userArea .user p{
+     font-size: 1.875rem;
+     text-align: center;
+     color: white;
+     padding-bottom: .625rem;
+}
+
+/**/
+
+main .userArea .inf{
+     background-color: #232f3e88;
+     margin-left: 1.5625rem;
+     width: 60%;
+     height: auto;
+     padding: 1.25rem;
+}
+
+main .userArea .inf p{
+     padding-top: .625rem;
+     color: white;
+     font-size: 1.5625rem;
+     text-align: center;
+}
+
+main .userArea .inf p a{
+     color: white;
+     background-color: transparent;
+     border-radius: .625rem;
+}
