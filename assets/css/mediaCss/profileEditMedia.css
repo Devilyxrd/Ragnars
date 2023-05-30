@@ -1,42 +1,43 @@
 /* Ekran genişliği 1024 pikselden küçük olduğunda */
 @media screen and (max-width: 768px) {
 
-     main {
-       height: 85rem;
-     }
-   
-     main .userArea {
-       flex-direction: column;
-       width: 90%;
-       margin: auto;
-     }
-   
-     main .userArea .user {
-       width: 100%;
-       margin-bottom: 2rem;
-       padding: 0;
-     }
-   
-     main .userArea .user img {
-       width: 40%;
-       height: auto;
-     }
-   
-     main .userArea .user h1 {
-       font-size: 2rem;
-     }
-   
-     main .userArea .user p {
-       font-size: 1.5rem;
-     }
-   
-     main .userArea .inf {
-       width: 100%;
-       margin-left: 0;
-       padding: 0;
-     }
-   
-     main .userArea .inf p {
-       font-size: 20px;
-     }
-   }
+  main {
+    height: 85rem;
+  }
+
+  main .userArea {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    padding: 0;
+  }
+
+  main .userArea .user {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  main .userArea .user img {
+    width: 40%;
+    height: auto;
+  }
+
+  main .userArea .user h1 {
+    font-size: 2rem;
+  }
+
+  main .userArea .user p {
+    font-size: 1.5rem;
+  }
+
+  main .userArea .inf {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  main .userArea .inf p {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,85 @@
+/*TELEFON*/
+
+@media screen and (max-width: 768px) {
+
+     header {
+          height: auto;
+     }
+
+     header .areaOne {
+          flex-direction: column;
+          height: auto;
+     }
+
+     header .areaOne .logoArea {
+          width: 100%;
+          margin-bottom: .625rem;
+          background-color: transparent;
+     }
+     
+     header .areaOne .userArea {
+          width: 100%;
+          padding: 0;
+          background-color: transparent;
+     }
+
+     header .areaOne .userArea a {
+          font-size: 1.7625rem;
+     }
+
+     /**/
+
+     header .areaTwo {
+          height: 4.375rem;
+     }
+
+     header .areaTwo .dropArea .drow-inactive{
+          display: block;
+     }
+
+     header .areaTwo .dropArea .drow-active {
+          display: none;
+     }
+
+     header .areaTwo .dropArea .drow-inactive .dropbtn{
+          display: block;
+          background-color: transparent;
+     }
+
+}
+
+/*LAPTOP*/
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+
+     header .areaOne .inputArea {
+          background-color: transparent;
+          width: 30%;
+     }
+
+     header .areaOne .userArea {
+          background-color: transparent;
+          width: 30%;
+     }
+
+     /**/
+
+     header .areaTwo .dropArea .drow-inactive .dropbtn{
+          display: block;
+     }
+
+     header .areaTwo .dropArea .drow-active {
+          display: none;
+     }
+
+}
+
+/*BÜYÜK EKRAN*/
+
+@media screen and (min-width: 1367px) {
+
+     header .areaOne .userArea {
+          width: 30%;
+     }
+     
+}

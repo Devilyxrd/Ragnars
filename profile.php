@@ -60,7 +60,7 @@
 
                     <h1><?= $data['name'] . " " . $data['surname'] ?></h1><br>
 
-                    <p>Hesap Türü: <?php if($data['accountType'] == "customer"){echo "Müşteri Hesabı";} else if($data['accountType'] == "business"){echo "İşletme Hesabı";} ?></p><br>
+                    <p>Hesap Türü: <?php if($data['accountType'] == "customer"){echo "Müşteri Hesabı";} else if($data['accountType'] == "business"){echo "İşletme Hesabı";} else if($data['accountType'] == "admin"){echo "Admin";} ?></p><br>
                     <p>Kayıt Tarihi: <?= $data['rDate'];?></p><br>
                     
                     <?php

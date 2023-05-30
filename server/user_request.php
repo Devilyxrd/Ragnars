@@ -211,10 +211,6 @@ if(isset($_POST['update'])){
     $minWidth = 950;
     $minHeight = 950;
 
-    $imgInfo = getimagesize($_FILES['photo']['tmp_name']);
-    $imgWidth = $imgInfo[0];
-    $imgHeight = $imgInfo[1];
-
     function encripitar($password)
     {
         $salt = '/x!a@r-$r%an¨.&e&+f*f(f(a)';
@@ -225,46 +221,72 @@ if(isset($_POST['update'])){
     $sql = $db -> query("SELECT * FROM 219f2_users WHERE email = '$email'");
     $query = $sql -> rowCount();
 
+    if($email){
+        
+        if($query == 1){
+            Header("Location: ../profileEdit/same");
+            exit;
+        } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            Header("Location: ../profileEdit/email");
+            exit;
+        } else {
+            $emailSql = $db -> query("UPDATE 219f2_users SET email = '$email' WHERE hash = '$hash'");
+            Header("Location: ../profileEdit/emailUpd");
+            exit;
+        }
+
+    }
+
+    if($pass && $passAgain){
+
+        
+        if(strlen($pass) < 8){
+            Header("Location: ../profileEdit/pass");
+            exit;
+        } else if($pass != $passAgain){
+            Header("Location: ../profileEdit/disagreement");
+            exit;
+        } else {
+            $newPass = encripitar($pass);
+            $passSql = $db -> query("UPDATE 219f2_users SET pass = '$newPass' WHERE hash = '$hash'");
+            Header("Location: ../profileEdit/passUpd");
+            exit;
+        }
+        
+    }
+
+    if($_FILES["photo"]['size'] > 0){
+
+        $imgInfo = getimagesize($_FILES['photo']['tmp_name']);
+        $imgWidth = $imgInfo[0];
+        $imgHeight = $imgInfo[1];
+
+        if($imgWidth > $minWidth || $imgHeight > $minHeight){
+            Header("Location: ../profileEdit/measure");
+            exit;
+        } else if(!in_array($_FILES["photo"]["type"], $allowedTypes)){
+            Header("Location: ../profileEdit/type");
+            exit;
+        } else if($_FILES["photo"]["size"] > $maxMB){
+            Header("Location: ../profileEdit/size");
+            exit;
+        } else {
+            $dir = "C:/xampp/htdocs/assets/media/profiles/$hash/";
+            $file = $dir . basename($_FILES["photo"]["name"]);
+            $tmp_name = $_FILES["photo"]["tmp_name"];
+            move_uploaded_file($tmp_name, $file);
+
+            $sql = $db -> query("UPDATE 219f2_users SET profileImg = '$file' WHERE hash = '$hash'");
+            Header("Location: ../profileEdit/photoUpd");
+            exit;
+        }
+
+    }
+    
     if(empty($email) || empty($pass) || empty($passAgain) || empty($hash) || $_FILES[$photo]['size'] < 0){
         Header("Location: ../profileEdit/empty");
         exit;
-    } else if($query == 1){
-        Header("Location: ../profileEdit/same");
-        exit;
-    } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        Header("Location: ../profileEdit/email");
-        exit;
-    } else if(strlen($pass) < 8){
-        Header("Location: ../profileEdit/pass");
-        exit;
-    } else if($pass != $passAgain){
-        Header("Location: ../profileEdit/disagreement");
-        exit;
-    } else if($imgWidth > $minWidth && $imgHeight > $minHeight){
-        Header("Location: ../profileEdit/measure");
-        exit;
-    } else if($_FILES["photo"]["size"] > $maxMB){
-        Header("Location: ../profileEdit/size");
-        exit;
-    } else if(!in_array($_FILES["photo"]["type"], $allowedTypes)){
-        Header("Location: ../profileEdit/type");
-        exit;
-    } else {
-
-        $newPass = encripitar($pass);
-        $domain = $_SERVER['SERVER_NAME'];
-
-        $dir = "C:/xampp/htdocs/assets/media/profiles/$hash/";
-        $file = $dir . basename($_FILES["photo"]["name"]);
-        $tmp_name = $_FILES["photo"]["tmp_name"];
-        move_uploaded_file($tmp_name, $file);
-
-
-        $userUpdate = $db -> query("UPDATE 219f2_users SET email = '$email' , pass = '$newPass' , profileImg = '$file'");
-
-        Header("Location: ../profileEdit/success");
-        exit;
-    }
+    } 
 
 }
 

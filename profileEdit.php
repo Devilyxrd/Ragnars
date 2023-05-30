@@ -35,6 +35,15 @@
      <?php
           if (htmlspecialchars($_GET['status'] == "empty")) {
                echo "<script>Swal.fire('Başarısız!','Boş alan bırakmayınız!','error')</script>";
+          } else if(htmlspecialchars($_GET['status'] == "photoUpd")){
+               echo "<script>Swal.fire('Başarılı','Profil fotoğrafınız başarıyla güncellendi','success');</script>";
+               echo "<script>setTimeout(() => window.location = '../profile', 3000);</script>";
+          } else if(htmlspecialchars($_GET['status'] == "emailUpd")){
+               echo "<script>Swal.fire('Başarılı','Email adresiniz başarıyla güncellendi','success');</script>";
+               echo "<script>setTimeout(() => window.location = '../profile', 3000);</script>";
+          } else if(htmlspecialchars($_GET['status'] == "passUpd")){
+               echo "<script>Swal.fire('Başarılı','Şifreniz başarıyla güncellendi','success');</script>";
+               echo "<script>setTimeout(() => window.location = '../profile', 3000);</script>";
           } else if(htmlspecialchars($_GET['status'] == "same")){
                echo "<script>Swal.fire('Başarısız!','Bu email adresi zaten hesabınızdaki ile aynı','error');</script>";
           } else if(htmlspecialchars($_GET['status'] == "email")){
@@ -92,7 +101,7 @@
 
                     <h1><?= $data['name'] . " " . $data['surname'] ?></h1><br>
 
-                    <p>Hesap Türü: <?php if($data['accountType'] == "customer"){echo "Müşteri Hesabı";} else if($data['accountType'] == "business"){echo "İşletme Hesabı";} ?></p><br>
+                    <p>Hesap Türü: <?php if($data['accountType'] == "customer"){echo "Müşteri Hesabı";} else if($data['accountType'] == "business"){echo "İşletme Hesabı";} else if($data['accountType'] == "admin"){echo "Admin";}  ?></p><br>
                     <p>Kayıt Tarihi: <?= $data['rDate'];?></p>
 
                </div>

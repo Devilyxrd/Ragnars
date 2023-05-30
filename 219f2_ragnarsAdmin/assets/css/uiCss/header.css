@@ -1,0 +1,151 @@
+header {
+     background-color: black;
+     width: 100%;
+     height: 14.0625rem;
+}
+
+header .areaOne {
+     background-color: #131921;
+     width: 100%;
+     height: 7.8125rem;
+     display: flex;
+}
+
+header .areaOne .logoArea {
+     background-color: transparent;
+     width: 35%;
+     height: 5.7625rem;
+     padding-top: 2rem;
+     text-align: center;
+}
+
+header .areaOne .logoArea a {
+     font-size: 2.5rem;
+     color: aliceblue;
+     text-decoration: none;
+}
+
+header .areaOne .userArea {
+     background-color: transparent;
+     width: 20%;
+     height: 4.9625rem;
+     padding: .625rem;
+     padding-top: 2.1875rem;
+     text-align: center;
+     margin-left: auto;
+}
+
+header .areaOne .userArea a {
+     background-color: transparent;
+     font-size: 2rem;
+     color: whitesmoke;
+     text-decoration: none;
+}
+
+/*USERAREA DROPDOWN*/
+
+header .areaOne .userArea .dropbtn {
+     background-color: transparent;
+     color: white;
+     padding: 1rem;
+     font-size: 1.8rem;
+     border: none;
+}
+
+header .areaOne .userArea .dropbtn a{
+     background-color: transparent;
+     color: white;
+     text-decoration: none;
+}
+
+header .areaOne .userArea .dropdown {
+     position: relative;
+     display: inline-block;
+}
+
+header .areaOne .userArea .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #2e3947;
+     min-width: 10rem;
+     box-shadow: 0rem .5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+     z-index: 1;
+}
+
+header .areaOne .userArea .dropdown-content a {
+     color: whitesmoke;
+     padding: .75rem 1rem;
+     text-decoration: none;
+     font-size: 1.5rem;
+     display: block;
+}
+
+header .areaOne .userArea .dropdown-content a:hover {
+     background-color: #232f3e;
+}
+
+header .areaOne .userArea .dropdown:hover .dropdown-content {
+     display: block;
+}
+
+/**/
+
+header .areaTwo {
+     background-color: #232f3e;
+     widows: 100%;
+     height: 6.25rem;
+     display: flex;
+}
+
+header .areaTwo .dropArea{
+     margin: auto;
+     background-color: #2e3947;
+     height: 3.125rem;
+}
+
+header .areaTwo .dropArea .drow-inactive .dropbtn{
+     display: none;
+}
+
+header .areaTwo .dropArea .dropbtn {
+     background-color: transparent;
+     color: white;
+     padding: 1rem;
+     font-size: 1rem;
+     border: none;
+}
+
+header .areaTwo .dropArea .dropbtn a{
+     background-color: transparent;
+     color: white;
+     text-decoration: none;
+}
+
+header .areaTwo .dropArea .dropdown {
+     position: relative;
+     display: inline-block;
+}
+
+header .areaTwo .dropArea .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #2e3947;
+     min-width: 10rem;
+     box-shadow: 0rem .5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+     z-index: 1;
+}
+
+header .areaTwo .dropArea .dropdown-content a {
+     color: whitesmoke;
+     padding: .75rem 1rem;
+     text-decoration: none;
+     display: block;
+}
+
+header .areaTwo .dropArea .dropdown-content a:hover {
+     background-color: #232f3e;
+}
+
+header .areaTwo .dropArea .dropdown:hover .dropdown-content {
+     display: block;
+}
