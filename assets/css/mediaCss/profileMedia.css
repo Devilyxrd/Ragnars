@@ -1,7 +1,7 @@
 /* Ekran genişliği 1024 pikselden küçük olduğunda */
 @media screen and (max-width: 1024px) {
   main{
-    height: 75rem;
+    height: 85rem;
   }
 
   main .userArea {

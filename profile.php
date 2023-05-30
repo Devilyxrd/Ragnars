@@ -92,7 +92,7 @@
 
                     <br><br><br>
 
-                    <p><a href="business">İşletme Hesabına Dönüştür</a> &emsp; <a href="#">Hesabımı Düzenle</a></p><br>
+                    <p><a href="business">İşletme Hesabına Dönüştür</a> &emsp; <a href="profileEdit">Hesabımı Düzenle</a></p><br>
                     <?php
                          }
                     }

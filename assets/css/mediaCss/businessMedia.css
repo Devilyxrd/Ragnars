@@ -1,5 +1,5 @@
 /* Ekran genişliği 1024 pikselden küçük olduğunda */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
 
   main {
     height: 80rem;

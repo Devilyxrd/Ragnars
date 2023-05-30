@@ -1,7 +1,7 @@
 main{
      background-color: whitesmoke;
      width: 100%;
-     height: 60rem;
+     height: 55rem;
      padding-top: 6.25rem;
 }
 
@@ -55,14 +55,52 @@ main .userArea .inf{
 }
 
 main .userArea .inf p{
-     padding-top: .625rem;
-     color: white;
-     font-size: 1.5625rem;
      text-align: center;
+     font-size: 1.75rem;
+     color: white;
 }
 
-main .userArea .inf p a{
+main .userArea .inf label{
+     margin: 0 auto 0 auto;
+     display: table;
+     font-size: 1.5625rem;
      color: white;
-     background-color: transparent;
+}
+
+main .userArea .inf input{
+     margin: 0 auto 0 auto;
+     display: table;
+}
+
+main .userArea .inf input[id]{
+     width: 50%;
+     height: 2.5rem;
      border-radius: .625rem;
+     outline: none;
+     border: .125rem solid white;
+     background-color: transparent;
+     padding-left: 1.25rem;
+     font-size: 1.125rem;
+     color: white;
+}
+
+main .userArea .inf input[type="submit"]{
+     width: 40%;
+     height: 2.8125rem;
+     border-radius: .625rem;
+     outline: none;
+     border: .125rem solid white;
+     background-color: transparent;
+     font-size: 1.125rem;
+     color: white;
+}
+
+main .userArea .inf input[type="file"]::-webkit-file-upload-button{
+     font: 300 14px  sans-serif;
+     background: transparent;
+     border: 0;
+     padding: 12px;
+     cursor: pointer;
+     color: #fff;
+     text-transform: uppercase;
 }

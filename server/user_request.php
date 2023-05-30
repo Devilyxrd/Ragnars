@@ -194,4 +194,78 @@ if (isset($_POST['convert'])){
 
 }
 
+
+if(isset($_POST['update'])){
+
+    $email = htmlspecialchars(strip_tags($_POST['email']));
+    $pass = htmlspecialchars(strip_tags($_POST['pass']));
+    $passAgain = htmlspecialchars(strip_tags($_POST['passAgain']));
+    $hash = htmlspecialchars(strip_tags($_POST['hash']));
+
+    $photo = htmlspecialchars(strip_tags($_POST['photo']));
+
+    $maxMB = 4 * 1024 * 1024;
+
+    $allowedTypes = array("image/jpeg" , "image/png");
+
+    $minWidth = 950;
+    $minHeight = 950;
+
+    $imgInfo = getimagesize($_FILES['photo']['tmp_name']);
+    $imgWidth = $imgInfo[0];
+    $imgHeight = $imgInfo[1];
+
+    function encripitar($password)
+    {
+        $salt = '/x!a@r-$r%an¨.&e&+f*f(f(a)';
+        $output = hash_hmac('md5', $password, $salt);
+        return $output;
+    }
+
+    $sql = $db -> query("SELECT * FROM 219f2_users WHERE email = '$email'");
+    $query = $sql -> rowCount();
+
+    if(empty($email) || empty($pass) || empty($passAgain) || empty($hash) || $_FILES[$photo]['size'] < 0){
+        Header("Location: ../profileEdit/empty");
+        exit;
+    } else if($query == 1){
+        Header("Location: ../profileEdit/same");
+        exit;
+    } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        Header("Location: ../profileEdit/email");
+        exit;
+    } else if(strlen($pass) < 8){
+        Header("Location: ../profileEdit/pass");
+        exit;
+    } else if($pass != $passAgain){
+        Header("Location: ../profileEdit/disagreement");
+        exit;
+    } else if($imgWidth > $minWidth && $imgHeight > $minHeight){
+        Header("Location: ../profileEdit/measure");
+        exit;
+    } else if($_FILES["photo"]["size"] > $maxMB){
+        Header("Location: ../profileEdit/size");
+        exit;
+    } else if(!in_array($_FILES["photo"]["type"], $allowedTypes)){
+        Header("Location: ../profileEdit/type");
+        exit;
+    } else {
+
+        $newPass = encripitar($pass);
+        $domain = $_SERVER['SERVER_NAME'];
+
+        $dir = "C:/xampp/htdocs/assets/media/profiles/$hash/";
+        $file = $dir . basename($_FILES["photo"]["name"]);
+        $tmp_name = $_FILES["photo"]["tmp_name"];
+        move_uploaded_file($tmp_name, $file);
+
+
+        $userUpdate = $db -> query("UPDATE 219f2_users SET email = '$email' , pass = '$newPass' , profileImg = '$file'");
+
+        Header("Location: ../profileEdit/success");
+        exit;
+    }
+
+}
+
 ?>
