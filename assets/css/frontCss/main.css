@@ -1,5 +1,135 @@
-main{
+#home-main {
      background-color: transparent;
      width: 100%;
-     height: 1000px;
+     height: auto;
+     margin-bottom: 200px;
+}
+
+.right-main {
+     position: absolute;
+     right: 0;
+     margin-right: 10px;
+     top: 40%;
+     font-size: 3.2rem;
+     color: #ddd;
+}
+
+.left-main {
+     position: absolute;
+     left: 0;
+     margin-left: 10px;
+     top: 40%;
+     font-size: 3.2rem;
+     color: #ddd;
+}
+
+.main-right {
+     display: flex;
+     flex-direction: column;
+}
+
+.top,
+.bottom {
+     flex: 1;
+}
+
+.product .product-image a {
+     display: block;
+     position: relative;
+}
+
+.product-yeni {
+     background: blue;
+     border-radius: 100%;
+     color: #fff;
+     right: 15px;
+     position: absolute;
+     top: 20px;
+     z-index: 99;
+     height: 40px;
+     width: 40px;
+     line-height: 40px;
+     text-align: center;
+     font-size: 11px;
+}
+
+
+.product-desc {
+     margin: 15px 0px 0px;
+}
+
+.product-review {
+     border-bottom: 1px solid #ebebeb;
+}
+
+.product-h5 {
+     font-size: 1.1rem;
+     font-weight: 400;
+     display: inline-block;
+     color: #a4a4a4;
+     line-height: 16px;
+}
+
+.rating.checked {
+     color: #f90;
+}
+
+.ratingDiv {
+     margin-bottom: 10px;
+}
+
+.rating {
+     font-size: 13px;
+}
+
+.productName {
+     color: #0363cd;
+     display: block;
+     font-size: 1.1rem;
+     font-weight: 500;
+     line-height: 18px;
+     text-transform: capitalize;
+     text-decoration: none;
+}
+
+.product-review {
+     display: flex;
+     justify-content: space-between;
+}
+
+.productInfo {
+     margin-top: 5px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+}
+
+.rating {
+     list-style-type: none;
+     display: flex;
+}
+
+.rating li.no-star i {
+     color: #e3e3e3;
+}
+
+.rating li i {
+     color: #fed700;
+}
+
+.productPrice {
+     color: #242424;
+     text-decoration: none;
+     font-size: 1.1rem;
+     font-weight: 500;
+     text-transform: uppercase;
+}
+
+.product-h5:hover {
+     color: #fed700;
+     transition: color .5s;
+}
+
+.productInfo {
+     margin-top: 5%;
 }
