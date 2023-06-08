@@ -35,8 +35,7 @@
                          <li>Rusya</li>
                          <li>Türkiye</li>
                     </ul>
-               
-                    <p>© 2023-2024, ragnars.xyz bağlı kuruluşları</p>
+                    <p>© 2023 yılına ait bir Ticari kuruluştur. Site Sahibi Devilyxrd</p>
                </div>
           </div>
 

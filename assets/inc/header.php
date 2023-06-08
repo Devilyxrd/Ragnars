@@ -47,6 +47,14 @@
                          <button class="dropbtn"><?=$data['name'] . " " . $data['surname']?></button>
                          <div class="dropdown-content">
                               <a href="/profile">Profil</a>
+                              <a href="/demand">Destek Taleplerim</a>
+                              <?php
+                                   if($data['accountType'] == 'business'){
+                              ?>
+                              <a href="/productAdd">Ürün Ekle</a>
+                              <?php
+                                   }
+                              ?>
                               <a href="/logout">Çıkış Yap</a>
                          </div>
                     </div>
@@ -74,14 +82,14 @@
                          <button class="dropbtn">Tüm Kategoriler</button>
                          <div class="dropdown-content">
                          <a href="/index">Anasayfa</a>
-                         <a href="#">Elektronik Ürünler</a>
-                         <a href="#">Giyim ve Moda</a>
-                         <a href="#">Ev ve Bahçe</a>
-                         <a href="#">Güzellik ve Kişisel Bakım</a>
-                         <a href="#">Spor ve Outdoor</a>
-                         <a href="#">Kitaplar ve Medya</a>
-                         <a href="#">Otomotiv</a>
-                         <a href="#">İletişim</a>
+                         <a href="/product">Elektronik Ürünler</a>
+                         <a href="/product">Giyim ve Moda</a>
+                         <a href="/product">Ev ve Bahçe</a>
+                         <a href="/product">Güzellik ve Kişisel Bakım</a>
+                         <a href="/product">Spor ve Outdoor</a>
+                         <a href="/product">Kitaplar ve Medya</a>
+                         <a href="/product">Otomotiv</a>
+                         <a href="/help">Destek</a>
                          </div>
                     </div>
 
@@ -90,114 +98,114 @@
                     </div>
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn">Elektronik Ürünler</button>
+                         <button class="dropbtn"><a href="/product">Elektronik Ürünler</a></button>
                          <div class="dropdown-content">
-                         <a href="#">Cep Telefonları ve Aksesuarları</a>
-                         <a href="#">Bilgisayarlar ve Tabletler</a>
-                         <a href="#">Televizyonlar ve Ev Sinema Sistemleri</a>
-                         <a href="#">Kameralar ve Fotoğraf Makineleri</a>
-                         <a href="#">Ses ve Video Cihazları</a>
-                         <a href="#">Oyun Konsolları ve Oyunlar</a>
-                         <a href="#">Elektronik Aksesuarlar</a>
+                         <a href="/product">Cep Telefonları ve Aksesuarları</a>
+                         <a href="/product">Bilgisayarlar ve Tabletler</a>
+                         <a href="/product">Televizyonlar ve Ev Sinema Sistemleri</a>
+                         <a href="/product">Kameralar ve Fotoğraf Makineleri</a>
+                         <a href="/product">Ses ve Video Cihazları</a>
+                         <a href="/product">Oyun Konsolları ve Oyunlar</a>
+                         <a href="/product">Elektronik Aksesuarlar</a>
                          </div>
                     </div>
 
                     <!---->
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn">Giyim ve Moda</button>
+                         <button class="dropbtn"><a href="/product">Giyim ve Moda</a></button>
                          <div class="dropdown-content">
-                         <a href="#">Erkek Giyim</a>
-                         <a href="#">Kadın Giyim</a>
-                         <a href="#">Çocuk Giyim</a>
-                         <a href="#">Ayakkabılar ve Ayakkabı Aksesuarları</a>
-                         <a href="#">Çantalar ve Cüzdanlar</a>
-                         <a href="#">Takı ve Aksesuarlar</a>
-                         <a href="#">Spor Giyim</a>
+                         <a href="/product">Erkek Giyim</a>
+                         <a href="/product">Kadın Giyim</a>
+                         <a href="/product">Çocuk Giyim</a>
+                         <a href="/product">Ayakkabılar ve Ayakkabı Aksesuarları</a>
+                         <a href="/product">Çantalar ve Cüzdanlar</a>
+                         <a href="/product">Takı ve Aksesuarlar</a>
+                         <a href="/product">Spor Giyim</a>
                          </div>
                     </div>
 
                     <!---->
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn">Ev ve Bahçe</button>
+                         <button class="dropbtn"><a href="/product">Ev ve Bahçe</a></button>
                          <div class="dropdown-content">
-                         <a href="#">Mobilya</a>
-                         <a href="#">Ev Dekorasyonu</a>
-                         <a href="#">Mutfak ve Yemek Eşyaları</a>
-                         <a href="#">Ev Gereçleri</a>
-                         <a href="#">Aydınlatma</a>
-                         <a href="#">Bahçe ve Peyzaj</a>
-                         <a href="#">Ev Güvenlik Sistemleri</a>
+                         <a href="/product">Mobilya</a>
+                         <a href="/product">Ev Dekorasyonu</a>
+                         <a href="/product">Mutfak ve Yemek Eşyaları</a>
+                         <a href="/product">Ev Gereçleri</a>
+                         <a href="/product">Aydınlatma</a>
+                         <a href="/product">Bahçe ve Peyzaj</a>
+                         <a href="/product">Ev Güvenlik Sistemleri</a>
                          </div>
                     </div>
 
                     <!---->
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn">Güzellik ve Kişisel Bakım</button>
+                         <button class="dropbtn"><a href="/product">Güzellik ve Kişisel Bakım</a></button>
                          <div class="dropdown-content">
-                         <a href="#">Parfümler ve Deodorantlar</a>
-                         <a href="#">Makyaj Malzemeleri</a>
-                         <a href="#">Cilt Bakımı</a>
-                         <a href="#">Saç Bakımı ve Şekillendirme</a>
-                         <a href="#">Kişisel Bakım Aletleri</a>
-                         <a href="#">Tıraş ve Epilasyon Ürünleri</a>
-                         <a href="#">Güneş Bakımı</a>
+                         <a href="/product">Parfümler ve Deodorantlar</a>
+                         <a href="/product">Makyaj Malzemeleri</a>
+                         <a href="/product">Cilt Bakımı</a>
+                         <a href="/product">Saç Bakımı ve Şekillendirme</a>
+                         <a href="/product">Kişisel Bakım Aletleri</a>
+                         <a href="/product">Tıraş ve Epilasyon Ürünleri</a>
+                         <a href="/product">Güneş Bakımı</a>
                          </div>
                     </div>
 
                     <!---->
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn">Spor ve Outdoor</button>
+                         <button class="dropbtn"><a href="/index">Spor ve Outdoor</a></button>
                          <div class="dropdown-content">
-                         <a href="#">Spor Giyim ve Ayakkabılar</a>
-                         <a href="#">Egzersiz ve Fitness Ekipmanları</a>
-                         <a href="#">Kamp Malzemeleri</a>
-                         <a href="#">Outdoor Giyim</a>
-                         <a href="#">Spor Aksesuarları</a>
-                         <a href="#">Bisikletler ve Aksesuarları</a>
-                         <a href="#">Su Sporları Ekipmanları</a>
+                         <a href="/product">Spor Giyim ve Ayakkabılar</a>
+                         <a href="/product">Egzersiz ve Fitness Ekipmanları</a>
+                         <a href="/product">Kamp Malzemeleri</a>
+                         <a href="/product">Outdoor Giyim</a>
+                         <a href="/product">Spor Aksesuarları</a>
+                         <a href="/product">Bisikletler ve Aksesuarları</a>
+                         <a href="/product">Su Sporları Ekipmanları</a>
                          </div>
                     </div>
 
                     <!---->
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn">Kitaplar ve Medya</button>
+                         <button class="dropbtn"><a href="/product">Kitaplar ve Medya</a></button>
                          <div class="dropdown-content">
-                         <a href="#">Kitaplar</a>
-                         <a href="#">E-kitaplar</a>
-                         <a href="#">Müzik CD'leri</a>
-                         <a href="#">Film ve TV Dizileri</a>
-                         <a href="#">Oyunlar ve Oyun Konsolları</a>
-                         <a href="#">Sanat ve El Sanatları Malzemeleri</a>
-                         <a href="#">Hobi ve Eğlence</a>
+                         <a href="/product">Kitaplar</a>
+                         <a href="/product">E-kitaplar</a>
+                         <a href="/product">Müzik CD'leri</a>
+                         <a href="/product">Film ve TV Dizileri</a>
+                         <a href="/product">Oyunlar ve Oyun Konsolları</a>
+                         <a href="/product">Sanat ve El Sanatları Malzemeleri</a>
+                         <a href="/product">Hobi ve Eğlence</a>
                          </div>
                     </div>
 
                     <!---->
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn">Otomotiv</button>
+                         <button class="dropbtn"><a href="/product">Otomotiv</a></button>
                          <div class="dropdown-content">
-                         <a href="#">Otomobil Yedek Parçaları</a>
-                         <a href="#">Lastikler ve Jantlar</a>
-                         <a href="#">Araç Elektroniği</a>
-                         <a href="#">Araç Bakım ve Temizlik Ürünleri</a>
-                         <a href="#">Motosikletler ve Aksesuarları</a>
-                         <a href="#">Araba Aksesuarları</a>
-                         <a href="#">Seyahat ve Taşıma Aksesuarları</a>
+                         <a href="/product">Otomobil Yedek Parçaları</a>
+                         <a href="/product">Lastikler ve Jantlar</a>
+                         <a href="/product">Araç Elektroniği</a>
+                         <a href="/product">Araç Bakım ve Temizlik Ürünleri</a>
+                         <a href="/product">Motosikletler ve Aksesuarları</a>
+                         <a href="/product">Araba Aksesuarları</a>
+                         <a href="/product">Seyahat ve Taşıma Aksesuarları</a>
                          </div>
                     </div>
 
                      <!---->
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn"><a href="#">İletişim</a></button>
+                         <button class="dropbtn"><a href="/help">Destek</a></button>
                     </div>
-               </div>
+               </div>    
 
           </div>
 

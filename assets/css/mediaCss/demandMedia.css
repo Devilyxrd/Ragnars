@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+     main .mega {
+          flex-wrap: wrap;
+     }
+
+     main .mega .areaOne {
+          width: 100%;
+          margin-bottom: 1.25rem;
+     }
+
+     main .mega .areaTwo {
+          width: 100%;
+     }
+}

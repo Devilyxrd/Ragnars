@@ -1,0 +1,104 @@
+main{
+     background-color: transparent;
+     width: 100%;
+     height: auto;
+     padding-top: 3.125rem;
+}
+
+main .area{
+     background-color: #232f3e;
+     margin: 0 auto;
+     width: 80%;
+     height: auto;
+     margin-bottom: 12.5rem;
+     padding: 2.5rem;
+}
+
+main .area .infArea{
+     background-color: #131921;
+     width: 100%;
+     height: auto;
+     padding: .3125rem;
+     margin-bottom: 3.75rem;
+}
+
+main .area .infArea span{
+     font-size: 1.5625rem;
+     color: gainsboro;
+}
+
+/**/
+
+main .area .helpArea{
+     background-color: #131921;
+     width: 100%;
+     height: auto;
+     padding: .3125rem;
+}
+
+main .area .helpArea form{
+     display: flex;
+}
+
+main .area .helpArea .helpOne{
+     background-color: transparent;
+     width: 40%;
+     height: auto;
+     padding: 1.25rem;
+}
+
+main .area .helpArea .helpOne input[id]{
+     width: 65%;
+     height: 2.5rem;
+     padding-left: 1.25rem;
+     border-radius: .9375rem;
+     outline: none;
+     border: .125rem solid gainsboro;
+     background-color: transparent;
+     font-size: 1.125rem;
+     color: white;
+}
+
+main .area .helpArea .helpOne input::placeholder{
+     color: white;
+}
+
+main .area .helpArea .helpOne label{
+     font-size: 1.5625rem;
+     color: white;
+}
+
+main .area .helpArea .helpOne input[name="send"]{
+     width: 35%;
+     height: 3.125rem;
+     border-radius: .9375rem;
+     outline: none;
+     border: .125rem solid gainsboro;
+     background-color: transparent;
+     font-size: 1.125rem;
+     color: white;
+}
+
+/**/
+
+main .area .helpArea .helpTwo{
+     background-color: transparent;
+     width: 60%;
+     height: auto;
+     padding: 1.25rem;
+}
+
+main .area .helpArea .helpTwo h1{
+     color: white;
+}
+
+main .area .helpArea .helpTwo textarea{
+     resize: none;
+     width: 100%;
+     height: 31.25rem;
+     font-size: 1.5625rem;
+     background-color: transparent;
+     border: .1875rem solid darkgray;
+     color: white;
+     outline: none;
+}

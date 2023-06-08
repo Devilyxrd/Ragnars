@@ -125,6 +125,8 @@
                          <input type="hidden" name="ip" value="<?= $data['ip']; ?>">
                          <input type="hidden" name="email" value="<?= $data['email']; ?>">
                          <input type="hidden" name="hash" value="<?= $data['hash']; ?>">
+                         <input type="hidden" name="name" value="<?= $data['name']; ?>">
+                         <input type="hidden" name="surname" value="<?= $data['surname']; ?>">
                     </form>
                     
                     <br><br>

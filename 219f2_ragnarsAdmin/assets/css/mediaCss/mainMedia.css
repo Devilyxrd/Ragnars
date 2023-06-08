@@ -1,0 +1,18 @@
+@media screen and (max-width: 768px) {
+
+     main .rules {
+          height: auto;
+     }
+
+     main .rules .area {
+          flex-direction: column;
+     }
+
+     main .rules .area .one,
+     main .rules .area .two,
+     main .rules .area .three {
+          width: 100%;
+          margin-bottom: 1.25rem;
+          padding: 0;
+     }
+}

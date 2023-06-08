@@ -1,0 +1,80 @@
+main{
+     background-color: transparent;
+     width: 100%;
+     height: auto;
+     padding-top: 3.125rem;
+     margin-bottom: 10rem;
+}
+
+main .mega{
+     margin: 0 auto;
+     background-color: #131921;
+     width: 80%;
+     height: auto;
+     padding: 1.25rem;
+}
+
+main .mega form{
+     display: flex;
+}
+
+main .mega .areaOne{
+     background-color: transparent;
+     width: 50%;
+     height: auto;
+}
+
+/**/
+
+main .mega .areaTwo{
+     background-color: transparent;
+     width: 50%;
+     height: auto;
+}
+
+main label{
+     margin: 0 auto 0 auto;
+     display: table;
+     font-size: 1.5625rem;
+     color: white;
+}
+
+main input,
+main select{
+     margin: 0 auto 0 auto;
+     display: table;
+}
+
+main input[id],
+main select{
+     width: 50%;
+     height: 2.5rem;
+     border-radius: .625rem;
+     outline: none;
+     border: .125rem solid white;
+     background-color: transparent;
+     padding-left: 1.25rem;
+     font-size: 1.125rem;
+     color: gray;
+}
+
+main input[type="submit"]{
+     width: 40%;
+     height: 2.8125rem;
+     border-radius: .625rem;
+     outline: none;
+     border: .125rem solid white;
+     background-color: transparent;
+     font-size: 1.125rem;
+     color: white;
+}
+
+main input[type="file"]::-webkit-file-upload-button{
+     font: 300 14px  sans-serif;
+     background: transparent;
+     border: 0;
+     padding: 10px 5px;
+     cursor: pointer;
+     color: #fff;
+     text-transform: uppercase;
+}

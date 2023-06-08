@@ -1,0 +1,63 @@
+main{
+     background-color: transparent;
+     width: 100%;
+     height: auto;
+     padding-top: 3.125rem;
+     margin-bottom: 12.5rem;
+}
+
+main .mega{
+     margin: 0 auto;
+     background-color: #131921;
+     width: 80%;
+     height: auto;
+     padding: 1.875rem;
+     display: flex;
+}
+
+main .mega .areaOne{
+     background-color: transparent;
+     width: 30%;
+     height: auto;
+     padding: 1.25rem;
+}
+
+main .mega .areaOne h1,
+main .mega .areaOne h2{
+     color: white;
+}
+
+main .mega .areaOne select{
+     width: 65%;
+     height: 2.1875rem;
+     border-radius: .3125rem;
+     background-color: transparent;
+     color: #939aa2;
+     border: .125rem solid ghostwhite;
+     outline: none;
+}
+
+/**/
+
+main .mega .areaTwo{
+     background-color: transparent;
+     width: 85%;
+     height: auto;
+     margin-left: auto;
+     padding: 1.25rem;
+}
+
+main .mega .areaTwo textarea{
+     background-color: transparent;
+     width: 100%;
+     height: 18.75rem;
+     resize: none;
+     outline: none;
+     border: .125rem solid gray;
+     font-size: 1.25rem;
+     color: white;
+}
+
+main .mega .areaTwo h1{
+     color: white;
+}

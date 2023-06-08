@@ -116,27 +116,26 @@ footer .mega .ragnars {
      height: 9.375rem;
 }
 
-footer .mega .ragnars h1{
+footer .mega .ragnars h1 {
      color: white;
      text-align: center;
 }
 
-footer .mega .ragnars ul{
+footer .mega .ragnars ul {
      display: flex;
      justify-content: center;
      align-items: center;
      list-style-type: none;
 }
 
-footer .mega .ragnars ul li{
+footer .mega .ragnars ul li {
      margin-top: 1.25rem;
      margin-left: .9375rem;
      color: white;
 }
 
-footer .mega .ragnars p{
+footer .mega .ragnars p {
      margin-top: .625rem;
      text-align: center;
      color: white;
 }
-

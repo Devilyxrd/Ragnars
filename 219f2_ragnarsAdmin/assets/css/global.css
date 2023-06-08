@@ -16,4 +16,5 @@ body::-webkit-scrollbar{
 body{
      user-select: none;
      font-family: 'Dosis', sans-serif;
+     background-image: url("");
 }

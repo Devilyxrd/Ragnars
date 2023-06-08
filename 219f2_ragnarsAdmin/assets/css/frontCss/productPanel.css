@@ -1,0 +1,61 @@
+main{
+     background-color: transparent;
+     width: 100%;
+     height: auto;
+     padding-top: 3rem;
+}
+
+main .tableArea{
+     width: 80%;
+     margin: 0 auto;
+     background-color: #232f3e;
+     margin-bottom: 25.0625rem;
+}
+
+main .dtr-control{
+     background-color: transparent;
+     display: flex;
+}
+
+main a{
+     text-decoration: none;
+     color: whitesmoke;
+}
+
+main ul{
+     list-style-type: none;
+}
+
+main ul li{
+     color: whitesmoke;
+}
+
+main thead tr th{
+     color: #9da4ab;
+}
+
+main tbody tr th{
+     color: whitesmoke;
+}
+
+main tbody tr th i{
+     color: rgba(220, 216, 216, 0.457);
+     margin-right: .625rem;
+     font-weight: lighter;
+}
+
+main table thead tr th{
+     color: white;
+     font-weight: 900;
+}
+
+main tbody tr th i:focus{
+     color: black;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+     cursor: default;
+     color: black;
+     border: 1px solid transparent;
+     background: red;
+}

@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+     main .mega form {
+          flex-direction: column;
+     }
+
+     main .mega .areaOne,
+     main .mega .areaTwo {
+          width: 100%;
+     }
+
+}

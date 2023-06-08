@@ -48,7 +48,7 @@
 
                          if($path == null){
                     ?>
-                         <img src="assets/media/profiles/<?= $hash ?>/<?= $file ?>" alt="EMPTY"> 
+                         <img src="assets/media/profiles/emptyProfile.png" alt="EMPTY"> 
                     <?php
                          } else {
                     ?>

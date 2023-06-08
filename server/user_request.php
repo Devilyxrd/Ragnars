@@ -146,6 +146,8 @@ if (isset($_POST['convert'])){
     $email = htmlspecialchars(strip_tags($_POST['email']));
     $ip = htmlspecialchars(strip_tags($_POST['ip']));
     $hash = htmlspecialchars(strip_tags($_POST['hash']));
+    $name = htmlspecialchars(strip_tags($_POST['name']));
+    $surname = htmlspecialchars(strip_tags($_POST['surname']));
 
     $date = date('y.m.d H:i:s');
 
@@ -161,14 +163,18 @@ if (isset($_POST['convert'])){
         exit;
     } else if($requestCount == 1){
         Header("Location: ../business/active");
+        exit;
     } else if(strlen($tc) != 11 || preg_match('/[a-zA-Z]/', $tc)){
         Header("Location: ../business/tc");
         exit;
     } else if(strlen($nPhone) != 13 || preg_match('/^\+90[5-9]{1}[0-9]{9}$/', $pNumber) || preg_match('/[a-zA-Z]/', $pNumber)){
         Header("Location: ../business/phone");
+        exit;
     }else {
         $statement = $db->prepare("INSERT INTO 219f2_request (
             ip,
+            name,
+            surname,
             email,
             tc,
             bDate,
@@ -177,9 +183,11 @@ if (isset($_POST['convert'])){
             addDate,
             status
             ) 
-            VALUES (?,?,?,?,?,?,?,?)");
+            VALUES (?,?,?,?,?,?,?,?,?,?)");
         $statement->execute(array(
             $ip,
+            $name,
+            $surname,
             $email,
             $tc,
             $bDate,
@@ -274,9 +282,10 @@ if(isset($_POST['update'])){
             $dir = "C:/xampp/htdocs/assets/media/profiles/$hash/";
             $file = $dir . basename($_FILES["photo"]["name"]);
             $tmp_name = $_FILES["photo"]["tmp_name"];
-            move_uploaded_file($tmp_name, $file);
+            mkdir($dir, 0777, true);
 
             $sql = $db -> query("UPDATE 219f2_users SET profileImg = '$file' WHERE hash = '$hash'");
+            move_uploaded_file($tmp_name, $file);
             Header("Location: ../profileEdit/photoUpd");
             exit;
         }
@@ -287,6 +296,131 @@ if(isset($_POST['update'])){
         Header("Location: ../profileEdit/empty");
         exit;
     } 
+
+}
+
+if(isset($_POST['send'])){
+
+    $name = htmlspecialchars(strip_tags($_POST['name']));
+    $surname = htmlspecialchars(strip_tags($_POST['surname']));
+    $email = htmlspecialchars(strip_tags($_POST['email']));
+    $phoneNumber = htmlspecialchars(strip_tags($_POST['phoneNumber']));
+    $accountType = htmlspecialchars(strip_tags($_POST['accountType']));
+    $hash = htmlspecialchars(strip_tags($_POST['hash']));
+    $msg = htmlspecialchars(strip_tags($_POST['helpMsg']));
+
+    $msgHash = md5($hash . md5(rand(111, 999)));
+
+    if(empty($name) || empty($surname) || empty($email) || empty($phoneNumber) || empty($accountType) || empty($hash) || empty($msg)){
+        Header("Location: ../help/empty");
+        exit;
+    } else if(strlen($phoneNumber) != 16 || preg_match('/^\90[5-9]{1}[0-9]{9}$/', $phoneNumber) || preg_match('/[a-zA-Z]/', $phoneNumber)){
+        Header("Location: ../help/phone");
+        exit;
+    } else {
+        $sql = $db -> prepare("INSERT INTO 219f2_help (`name`, `surname`, `message`, `email`, `phoneNumber`, `hash`, `accessType`, `msgHash`) VALUES(?,?,?,?,?,?,?,?)");
+        $query = $sql -> execute(array($name,$surname,$msg,$email,$phoneNumber,$hash,$accountType,$msgHash));
+        Header("Location: ../help/success");
+        exit;
+    }
+
+}
+
+if(isset($_POST['productAdd'])){
+    
+    $productName = htmlspecialchars(strip_tags($_POST['productName']));
+    $productImg = $_FILES['productImg'];
+    $category = htmlspecialchars(strip_tags($_POST['category']));
+    $subCategory = htmlspecialchars(strip_tags($_POST['subCategory']));
+    $price = htmlspecialchars(strip_tags($_POST['price']));
+    $commission = htmlspecialchars(strip_tags($_POST['commission']));
+    $hash = htmlspecialchars(strip_tags($_POST['hash']));
+
+    $maxMB = 4 * 1024 * 1024;
+
+    $allowedTypes = array("image/jpeg" , "image/png", "image/jpg");
+
+    $minWidth = 500;
+    $minHeight = 500;
+
+    $lengthCheck = strlen($productName) > 40;
+
+    $productHash = md5($productName . $category . md5(rand(111, 999)));
+
+    $productImg['tmp_name'];
+
+    if(empty($productName) || $productImg['size'] <= 0  || empty($category) || empty($subCategory) || empty($price) || empty($commission)){
+        Header("Location: ../productAdd/empty");
+        exit;
+    } else if($lengthCheck){
+        Header("Location: ../productAdd/length");
+        exit;
+    } else if(ctype_digit($productName)){
+        Header("Location: ../productAdd/nameType");
+        exit;
+    } else if(preg_match('/[a-zA-Z]/', $price)){
+        Header("Location: ../productAdd/priceType");
+        exit;
+    } else {
+
+        $types = array(IMAGETYPE_JPEG, IMAGETYPE_PNG);
+        $detected = exif_imagetype($productImg['tmp_name']);
+
+        if(in_array($detected, $types)){
+            
+            $imgInfo = getimagesize($_FILES['productImg']['tmp_name']);
+            $imgWidth = $imgInfo[0];
+            $imgHeight = $imgInfo[1];
+
+            if($imgWidth > $minWidth || $imgHeight > $minHeight){
+                Header("Location: ../productAdd/measure");
+                exit;
+            } else if ($productImg["size"] > $maxMB){
+                Header("Location: ../productAdd/size");
+                exit;
+            } else {
+                $dir = "C:/xampp/htdocs/assets/media/products/";
+                $file = $dir . basename($productImg["name"]);
+                $tmp_name = $productImg["tmp_name"];
+                mkdir($dir, 0777, true);
+                move_uploaded_file($tmp_name, $file);
+        
+                switch($category){
+                    case "1":
+                        $category = "Elektronik Ürünler";
+                    break;
+                    case "2":
+                        $category = "Giyim ve Moda";
+                    break;
+                    case "3":
+                        $category = "Ev ve Bahçe";
+                    break;
+                    case "4":
+                        $category = "Güzellik ve Kişisel Bakım";
+                    break;
+                    case "5":
+                        $category = "Spor ve Outdoor";
+                    break;
+                    case "6":
+                        $category = "Kitaplar ve Medya";
+                    break;
+                    case "7":
+                        $category = "Otomotiv";
+                    break;
+                }
+        
+                $sql = $db -> prepare("INSERT INTO 219f2_productRequest(`productName`, `productImg`, `category`, `subCategory`, `price`, `commission`, `productHash`) VALUES(?,?,?,?,?,?,?)");
+                $sql -> execute(array($productName,$file,$category,$subCategory,$price,$commission,$productHash));
+                Header("Location: ../productAdd/success");
+                exit;
+            }
+
+        } else {
+            Header("Location: ../productAdd/type");
+            exit;
+        }
+        
+    }
 
 }
 

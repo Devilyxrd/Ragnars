@@ -22,7 +22,7 @@
           <div class="areaOne">
                
                <div class="logoArea">
-                    <a href="#">RAGNARS E-TİCARET</a>
+                    <a href="/219f2_ragnarsAdmin/index">RAGNARS E-TİCARET</a>
                </div>
 
                <div class="userArea">
@@ -62,37 +62,48 @@
                          <button class="dropbtn">Tüm Kategoriler</button>
                          <div class="dropdown-content">
                               <a href="/219f2_ragnarsAdmin/index">Anasayfa</a>
-                              <a href="#">Kullanıcı Paneli</a>
-                              <a href="#">Ürün Paneli</a>
-                              <a href="#">İşletme Hesabı Onaylama Paneli</a>
-                              <a href="#">İşletme Hesapları</a>
-                              <a href="#">Destek Paneli</a>
+                              <a href="/219f2_ragnarsAdmin/userPanel">Kullanıcı Paneli</a>
+                              <a href="/219f2_ragnarsAdmin/productPanel">Ürün Paneli</a>
+                              <a href="/219f2_ragnarsAdmin/productRequest">Ürün Onaylama Paneli</a>
+                              <a href="/219f2_ragnarsAdmin/businessCheck">İşletme Hesabı Onaylama Paneli</a>
+                              <a href="/219f2_ragnarsAdmin/businessAccount">İşletme Hesapları</a>
+                              <a href="/219f2_ragnarsAdmin/helpPanel">Destek Paneli</a>
+                              <a href="/219f2_ragnarsAdmin/bannedAccount">Yasaklı Kullanıcılar</a>
                          </div>
                     </div>
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn"><a href="#">Anasayfa</a></button>
+                         <button class="dropbtn"><a href="/219f2_ragnarsAdmin/index">Anasayfa</a></button>
                     </div>
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn"><a href="#">Kullanıcı Paneli</a></button>
+                         <button class="dropbtn"><a href="/219f2_ragnarsAdmin/userPanel">Kullanıcı Paneli</a></button>
                     </div>
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn"><a href="#">Ürün Paneli</a></button>
+                         <button class="dropbtn"><a href="/219f2_ragnarsAdmin/productPanel">Ürün Paneli</a></button>
                     </div>
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn"><a href="#">İşletme Hesabı Onaylama Paneli</a></button>
+                         <button class="dropbtn"><a href="/219f2_ragnarsAdmin/productRequest">Ürün Onaylama Paneli</a></button>
                     </div>
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn"><a href="#">İşletme Hesapları</a></button>
+                         <button class="dropbtn"><a href="/219f2_ragnarsAdmin/businessCheck">İşletme Hesabı Onaylama Paneli</a></button>
                     </div>
 
                     <div class="dropdown drow-active">
-                         <button class="dropbtn"><a href="#">Destek Paneli</a></button>
+                         <button class="dropbtn"><a href="/219f2_ragnarsAdmin/businessAccount">İşletme Hesapları</a></button>
                     </div>
+
+                    <div class="dropdown drow-active">
+                         <button class="dropbtn"><a href="/219f2_ragnarsAdmin/helpPanel">Destek Paneli</a></button>
+                    </div>
+
+                    <div class="dropdown drow-active">
+                         <button class="dropbtn"><a href="/219f2_ragnarsAdmin/bannedAccount">Yasaklı Kullanıcılar</a></button>
+                    </div>
+                    
                </div>
 
           </div>
